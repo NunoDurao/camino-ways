@@ -8,7 +8,7 @@ St James Way Were to Stay App
 
 ## Description
 
-A web application for registering and managing information related to accomodation during the portuguese St James Way (Caminho de Santiago).
+A web application for registering and managing information related to accommodation during the portuguese St James Way (Caminho de Santiago).
 
 
 
@@ -17,7 +17,7 @@ A web application for registering and managing information related to accomodati
 
 ## User Stories
 
-1. As a user, I want to be able to create an account on the app so that I can access and manage information related to my accomodation during the St James Way journey.
+1. As a user, I want to be able to create an account on the app so that I can access and manage information related to my accommodation during the St James Way journey.
 
 2. As a user, I want to be able to log in and log out of my account to protect my information.
 
