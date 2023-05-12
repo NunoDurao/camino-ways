@@ -21,9 +21,9 @@ A web application for registering and managing information related to accomodati
 
 2. As a user, I want to be able to log in and log out of my account to protect my information.
 
-3. As a user, I want to be able to view and manage information related to the places were i stayed.
+3. As a user, I want to be able to view and manage information related to the places were i will stay.
 
- 4.As a user, I want to be able to add new accomodations, update and delete existing information, that i provided.
+4.   As a user, I want to be able to add new accommodations, update and delete existing ones.
 
 
 
@@ -44,7 +44,7 @@ A web application for registering and managing information related to accomodati
 | `POST`     | `/signup`                          | Sends Sign Up info to the server and creates user in the DB. | {  email, password}
 | `GET`      | `/name`                     |name, type, rating                                   |
 | `POST`     | `/routes`                          | Adds a new route to the database. {name, type, rating,price}                              |
-| `DELETE`   | `/private/favorites/:restaurantId` | Private route. Deletes the existing favorite from the current user. |                                                          |
+| `DELETE`   | `/routes/:id` | Private route. Deletes the existing favorite from the current user. |                                                          |
 | `GET`      | `/routes/:id`                     | Renders view of a single route. view.                              |                                                          |
 | `PUT`      | `/routes/:id`         | Updates information for a specific route. { name, type, rating, price}  |
 | `DELETE`      | `/routes/:id`         |Deletes a specific route from the database. |
@@ -59,7 +59,7 @@ User model
 {
   name: String,
   email: String,
-  password: Number,
+  password: String,
 }
 
 ```
@@ -69,7 +69,7 @@ User model
 Favorites model
 
 ```javascript
-Route model
+Accommodation model
 
 {
 name: String,
