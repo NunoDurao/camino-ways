@@ -34,15 +34,6 @@ router.post('/stages/create', fileUploader.single('stage-image'), async (req,res
 
 });
 
-<<<<<<< HEAD
-
-
-
-//see all celebs and celebs details
-=======
-//see all stages and stages details
->>>>>>> c50a33abdd0c2c66269eaf3f18f58bde5eeaa40d
-
 router.get("/stages", async (req, res, next) => {
   try {
     const allStages = await Stages.find();
