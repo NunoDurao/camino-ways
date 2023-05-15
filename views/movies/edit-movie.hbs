@@ -19,10 +19,10 @@
   <div>
     <label for='cast'>Cast:</label>
     <select name='cast' id='cast' multiple>
-      {{#each celebsinSelectedMovie}}
+      {{#each stagesinSelectedMovie}}
         <option value='{{this._id}}' selected class='selected'>{{this.name}}</option>
       {{/each}}
-      {{#each celebsNotInMovie}}
+      {{#each stagesNotInMovie}}
         <option value='{{this._id}}'>{{this.name}}</option>
       {{/each}}
     </select>

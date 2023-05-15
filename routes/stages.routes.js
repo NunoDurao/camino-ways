@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Stages = require("../models/stages.model");
+const Stages = require("../models/Stage.model");
 
 // Require fileUploader
 const fileUploader = require('../config/cloudinary.config');
@@ -34,12 +34,16 @@ router.post('/stages/create', fileUploader.single('stage-image'), async (req,res
 
 });
 
+<<<<<<< HEAD
 
 
 
 //see all celebs and celebs details
+=======
+//see all stages and stages details
+>>>>>>> c50a33abdd0c2c66269eaf3f18f58bde5eeaa40d
 
-router.get("/", async (req, res, next) => {
+router.get("/stages", async (req, res, next) => {
   try {
     const allStages = await Stages.find();
     res.render("stages/stages", { allStages });
@@ -60,7 +64,7 @@ router.get("/stages/:id", async (req, res, next) => {
   }
 });
 
-//Update celebs
+//Update stages
 router.get("/stages/edit/:id", async (req, res, next) => {
   const stagesId = req.params.id;
   try {
@@ -89,7 +93,7 @@ router.post("/stages/edit/:id", async (req, res, next) => {
   }
 });
 
-//delete celebs
+//delete stages
 router.post("/stages/delete/:id", async (req, res, next) => {
   const stagesId = req.params.id;
   try {
