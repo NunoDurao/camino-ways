@@ -2,18 +2,23 @@
 
 <form action="/stages/edit/{{_id}}" method="post">
 <div class="form-div">
-  <label for="name">Name:</label>
+  <label for="name">name:</label>
   <input type="text" name="name" id="name" value="{{name}}">
 </div>
 
 <div class="form-div">
-  <label for="occupation">Occupation:</label>
-  <input type="text" name="occupation" id="occupation" value="{{occupation}}">
+  <label for="location">Location:</label>
+  <input type="text" name="location" id="location" value="{{location}}">
 </div>
 
 <div class="form-div">
-  <label for="catchPhrase">Catch Phrase:</label>
-  <input type="text" name="catchPhrase" id="catchPhrase" value="{{catchPhrase}}">
+  <label for="comments">Comments:</label>
+  <input type="text" name="comments" id="comments" value="{{comments}}">
+</div>
+
+<div class="form-div">
+  <label for="uploadPhoto">Upload Photo:</label>
+  <input type="text" name="uploadPhoto" id="uploadPhoto" value="{{uploadPhoto}}">
 </div>
 
   <button type="submit" class="btn">Edit {{name}}</button>
