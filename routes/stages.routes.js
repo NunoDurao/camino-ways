@@ -1,28 +1,38 @@
 const router = require("express").Router();
 const Stages = require("../models/Stage.model");
 
+// Require fileUploader
+const fileUploader = require('../config/cloudinary.config');
+
 // all your routes here
 
 //create stages
-
-router.get("/stages/create", (req, res, next) =>
-  res.render("stages/new-stages")
-);
-
-router.post("/stages/create", async (req, res, next) => {
-  const { name, location, comments, uploadPhoto } = req.body;
-
+router.get("/stages", async (req, res, next) => {
   try {
-    await Stages.create({ name, location, comments, uploadPhoto });
-    res.redirect("/stages");
+    const allStages = await Stages.find()
+    res.render("stages/stages", {allStages})
   } catch (error) {
-    //render again this
     console.log(error);
     next(error);
   }
 });
 
-//see all stages and stages details
+router.get("/stages/create", (req, res, next) =>
+  res.render("stages/new-stages")
+);
+
+router.post('/stages/create', fileUploader.single('stage-image'), async (req,res)=>{
+  const {location, comments} = req.body; 
+      try{
+      await Stages.create({location, comments, imageUrl: req.file.path});
+      //console.log(createdStage);
+      res.redirect('/stages');
+      }
+      catch(error){
+          console.log(error);
+      }
+
+});
 
 router.get("/stages", async (req, res, next) => {
   try {
