@@ -1,7 +1,7 @@
 //  Add your code here
 const {Schema, model} = require("mongoose");
 
-const celebSchema = new Schema({
+const stagesSchema = new Schema({
     name: String,
     occupation:{
         type: String,
@@ -10,6 +10,6 @@ const celebSchema = new Schema({
     catchPhrase: String
 })
 
-const Celeb = model("Celeb", celebSchema);
+const Stages = model("Celeb", stagesSchema);
 
-module.exports = Celeb;
+module.exports = Stages;
