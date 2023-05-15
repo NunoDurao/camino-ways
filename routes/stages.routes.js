@@ -49,7 +49,7 @@ router.get("/stages/:id", async (req, res, next) => {
 router.get("/stages/edit/:id", async (req, res, next) => {
   const stagesId = req.params.id;
   try {
-    const pickedStages = await Stages.findById(StagesId);
+    const pickedStages = await Stages.findById(stagesId);
     res.render("stages/edit-stages", pickedStages);
   } catch (error) {
     console.log(error);
