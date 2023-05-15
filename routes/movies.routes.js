@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Celeb = require("../models/stages.model");
+const Stages = require("../models/Stage.model");
 const Movie = require("../models/Movie.model");
 
 // all your routes here
@@ -8,10 +8,10 @@ const Movie = require("../models/Movie.model");
 
 router.get("/movies/create", async (req, res, next) => {
   try {
-    const allCelebs = await Celeb.find();
-    console.log(allCelebs);
+    const allStages = await Stages.find();
+    console.log(allStages);
 
-    res.render("movies/new-movie", { allCelebs });
+    res.render("movies/new-movie", { allStages });
   } catch (error) {
     console.log(error);
     next(error);
@@ -73,20 +73,20 @@ router.get("/movies/edit/:id", async (req, res, next) => {
   try {
     const movieId = req.params.id;
     const selectedMovie = await Movie.findById(movieId);
-    const allCelebs = await Celeb.find();
-    const celebsinSelectedMovie = [];
-    const celebsNotInMovie = [];
+    const allStages = await Stages.find();
+    const stagesinSelectedMovie = [];
+    const stagesNotInMovie = [];
 
-    allCelebs.forEach((actor) => {
+    allStages.forEach((actor) => {
       selectedMovie.cast.forEach((actorId) => {
-        if (actor._id.equals(actorId)) celebsinSelectedMovie.push(actor);
+        if (actor._id.equals(actorId)) stagesinSelectedMovie.push(actor);
       });
-      if (!celebsinSelectedMovie.includes(actor)) celebsNotInMovie.push(actor);
+      if (!stagesinSelectedMovie.includes(actor)) stagesNotInMovie.push(actor);
     });
     res.render("movies/edit-movie", {
       selectedMovie,
-      celebsinSelectedMovie,
-      celebsNotInMovie,
+      stagesinSelectedMovie,
+      stagesNotInMovie,
     });
   } catch (error) {
     console.log(error);

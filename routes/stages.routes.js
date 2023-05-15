@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Stages = require("../models/stages.model");
+const Stages = require("../models/Stage.model");
 
 // all your routes here
 
@@ -22,9 +22,9 @@ router.post("/stages/create", async (req, res, next) => {
   }
 });
 
-//see all celebs and celebs details
+//see all stages and stages details
 
-router.get("/", async (req, res, next) => {
+router.get("/stages", async (req, res, next) => {
   try {
     const allStages = await Stages.find();
     res.render("stages/stages", { allStages });
@@ -45,7 +45,7 @@ router.get("/stages/:id", async (req, res, next) => {
   }
 });
 
-//Update celebs
+//Update stages
 router.get("/stages/edit/:id", async (req, res, next) => {
   const stagesId = req.params.id;
   try {
@@ -74,7 +74,7 @@ router.post("/stages/edit/:id", async (req, res, next) => {
   }
 });
 
-//delete celebs
+//delete stages
 router.post("/stages/delete/:id", async (req, res, next) => {
   const stagesId = req.params.id;
   try {
