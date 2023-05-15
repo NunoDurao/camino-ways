@@ -1,14 +1,15 @@
-<h2>Stages Info</h2>
+<h2>Photo Info</h2>
 <div class="details-box">
   <h3 class="names">{{name}}</h3>
-  <p><span class="grey-span">Occupation: </span>{{occupation}}</p>
-  <p><span class="grey-span">Catch phrase: </span>{{catchPhrase}}</p>
+  <p><span class="grey-span">Location: </span>{{location}}</p>
+  <p><span class="grey-span">Comments: </span>{{comments}}</p>
+  <p><span class="grey-span">Upload Photo: </span>{{uploadPhoto}}</p>
 </div>
 
 <div class="box">
   <a href="/stages/edit/{{_id}}" class="btn">Edit</a>
   <form action="/stages/delete/{{_id}}" method="post">
-    <button type="submit" class="btn">Delete {{name}}</button>
+    <button type="submit" class="btn">Delete Photo{{name}}</button>
   </form>
 </div>
 

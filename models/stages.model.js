@@ -10,6 +10,6 @@ const stagesSchema = new Schema({
     catchPhrase: String
 })
 
-const Stages = model("Celeb", stagesSchema);
+const Stages = model("Stages", stagesSchema);
 
 module.exports = Stages;

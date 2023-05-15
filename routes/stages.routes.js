@@ -3,17 +3,17 @@ const Stages = require("../models/stages.model");
 
 // all your routes here
 
-//create celebs
+//create stages
 
 router.get("/stages/create", (req, res, next) =>
   res.render("stages/new-stages")
 );
 
 router.post("/stages/create", async (req, res, next) => {
-  const { name, occupation, catchPhrase } = req.body;
+  const { name, location, comments, uploadPhoto } = req.body;
 
   try {
-    await Stages.create({ name, occupation, catchPhrase });
+    await Stages.create({ name, location, comments, uploadPhoto });
     res.redirect("/stages");
   } catch (error) {
     //render again this
@@ -59,12 +59,13 @@ router.get("/stages/edit/:id", async (req, res, next) => {
 
 router.post("/stages/edit/:id", async (req, res, next) => {
   const stagesId = req.params.id;
-  const { name, occupation, catchPhrase } = req.body;
+  const { name, location, comments, uploadPhoto } = req.body;
   try {
     const pickedStages = await Stages.findByIdAndUpdate(stagesId, {
       name,
-      occupation,
-      catchPhrase,
+      location,
+      comments,
+      uploadPhoto,
     });
     res.redirect(`/stages/${stagesId}`);
   } catch (error) {
