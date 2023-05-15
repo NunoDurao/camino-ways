@@ -33,6 +33,7 @@ app.use("/auth", authRoutes);
 const stagesRoutes = require("./routes/stages.routes");
 app.use("/", stagesRoutes);
 
+
 //const moviesRoutes = require('./routes/movies.routes');
 //app.use('/', moviesRoutes);
 
