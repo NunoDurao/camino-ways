@@ -25,13 +25,15 @@ router.post(
   "/stages/create",
   fileUploader.single("imageUrl"),
   async (req, res) => {
-    const { name, location, comments } = req.body;
-    let imageUrl;
-    if (req.file) {
-      imageUrl = req.file.path;
-    }
     try {
-      await Stages.create({ name, location, comments, imageUrl });
+      const userId = req.session.currentUser._id;
+      const { location, comments } = req.body;
+      let imageUrl;
+      if (req.file) {
+        imageUrl = req.file.path;
+      }
+
+      await Stages.create({ author: userId, location, comments, imageUrl });
       //console.log(createdStage);
       res.redirect("/stages");
     } catch (error) {
