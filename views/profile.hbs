@@ -1,6 +1,15 @@
-<h2>Check all Photos!</h2>
+<h2>Photo Info</h2>
+<div class="details-box">
+  <h3 class="names">{{name}}</h3>
+  <p><span class="grey-span">Location: </span>{{location}}</p>
+  <p><span class="grey-span">Comments: </span>{{comments}}</p>
+  </div>
+
 <div class="box">
-{{#each allStages}}
-<a href="/stages/{{_id}}" class="btn">{{name}}</a>
-{{/each}}
+  <a href="/stages/edit/{{_id}}" class="btn">Edit</a>
+  <form action="/stages/delete/{{_id}}" method="post">
+    <button type="submit" class="btn">Delete Photo{{name}}</button>
+  </form>
 </div>
+
+

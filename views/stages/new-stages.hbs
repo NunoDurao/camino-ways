@@ -1,25 +1,37 @@
 <h2>Add a Photo</h2>
 
 <form action="/stages/create" method="post" enctype="multipart/form-data">
-<div>
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name">
-</div>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" />
+  </div>
 
-<div>
-  <label for="location">Location:</label>
-  <input type="text" name="location" id="location">
-</div>
+  <div>
+    <label for="location">Location:</label>
+    <select name="location" id="location">
+      <option value="Porto-Vairao">Porto - Vairao</option>
+      <option value="Vairao-Barcelos">Vairao-Barcelos</option>
+      <option value="Barcelos-Ponte de Lima">Barcelos-Ponte de Lima</option>
+      <option value="Ponte de Lima-Rubiaes">Ponte de Lima-Rubiaes</option>
+      <option value="Rubiaes-Tui">Rubiaes-Tui</option>
+      <option value="Tui-Mos">Tui-Mos</option>
+      <option value="Mos-Pontevedra">Mos-Pontevedra</option>
+      <option value="Pontevedra-Caldas de Reis">Pontevedra-Caldas de Reis</option>
+      <option value="Caldas de Reis-Padron">Caldas de Reis-Padron</option>
+      <option value="Padron-Santiago de Compostela">Padron-Santiago de
+        Compostela</option>
+    </select>
+  </div>
 
-<div>
-  <label for="comments">Comments:</label>
-  <input type="text" name="comments" id="comments">
-</div>
+  <div>
+    <label for="comments">Comments:</label>
+    <input type="text" name="comments" id="comments" />
+  </div>
 
-<div>
-  <label for="uploadPhoto">Upload Photo:</label>
-  <input type="file" name="imageUrl" id="uploadPhoto">
-</div>
+  <div>
+    <label for="uploadPhoto">Upload Photo:</label>
+    <input type="file" name="imageUrl" id="uploadPhoto" />
+  </div>
 
   <button type="submit" class="btn">Submit</button>
 </form>
