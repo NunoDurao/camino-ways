@@ -1,7 +1,7 @@
 
 
 <style>
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
   body {
     background-color: #1e3b8ae5;;
     background-size: cover;
@@ -15,10 +15,11 @@
     border: 2px solid black;
     float: left;
     width: 300px;
+    margin-left: 60px;
     transition-duration: 0.4s;
     border-radius: 5px;
     animation: winanim 0.5s ;
--webkit-backface-visibility:visible;
+    -webkit-backface-visibility:visible;
     backface-visibility:visible;
     box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)
 }
@@ -31,7 +32,12 @@
     width: 100%;
     height: auto;
     border-radius: 5px
+    
 }
+
+.Portfolio-move {
+      margin-left: 200px;
+    }
 
 .desc {
     padding: 5px;
@@ -68,6 +74,7 @@
     50%{opacity:1}
     
 }
+
 </style>
 
 
@@ -78,22 +85,23 @@
 <!---Include the above in your HEAD tag --->
 <body>
 <div class="details-box">
-    <h3 class="names">
-  <span style="color: yellow;">{{user.username}}</span>
-</h3>
-    <button onclick="location.href='/auth/logout'" class="btn btn-primary position-absolute top-0 end-0" style="margin-top: 5px; right: 10px;">Logout</button>
+    <h3 class="names" style="margin-top: 20px;">
+        <span style="color: yellow;">{{user.username}}</span>
+    </h3>
+    <button onclick="location.href='/auth/logout'" class="btn btn-primary position-absolute top-0 end-0" style="margin-top: -40px; right: 10px;">Logout</button>
   </div>
   <div class="container-fluid">
-    <h1 class="text-center" style="color:#1E3A8A;">
-  <img src="images/Camino_Ways1_481.png" alt="Image Description" style="width: 10%; margin-left: -975px; margin-top: 7px border: 10px solid blue;">
-</h1>
+  <h1 class="text-center" style="color:#1E3A8A;">
+    <img src="images/Camino_Ways1_481.png" alt="Image Description" style="width: 10%; margin-left: -975px; margin-top: -10px; border: 2px solid yellow;">
+  </h1>
 
-    <div class="row">
-      <div class="col-md-12 position-relative">
-        <img src="images/1-42-1.jpg" alt="Image Description" class="mx-auto d-block" style="width: 50%; margin-top: -90px; border: 2px solid blue; padding: 5px;">
-      </div>
+  <div class="row">
+    <div class="col-md-12 position-relative">
+      <img src="images/ajulejo.jpg" alt="Image Description" class="mx-auto d-block" style="width: 50%; margin-top: -150px; border: 2px solid black;border-radius: 5px;">
     </div>
   </div>
+</div>
+
 
 
 
@@ -135,7 +143,7 @@
 </ul>
 
 </ul>
-</div><hr noshade style="margin-top:-20px;">
+</div><hr noshade style="margin-top:-20px; margin-right: -50px">
 <div class="container">
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
@@ -148,24 +156,7 @@
     </div>
     </a>
 {{/each}}
-{{!--     <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Porto-Vairao</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Porto-Vairao</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Porto-Vairao</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 1</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 2</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">City 2</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Car 3</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">City 3</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 3</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Car 1</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">City 1</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Car 2</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 1</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 2</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">City 2</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Car 3</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">City 3</div></div>
-    <div class="Portfolio"><a href="#!"><img class="card-img" src="http://placehold.it/400x400" alt=""></a><div class="desc">Forest 3</div></div> --}}
+
     
   </div>
   <div class="tab-pane fade" id="portoVairao" role="tabpanel" aria-labelledby="Cars-tab">

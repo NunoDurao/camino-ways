@@ -279,27 +279,15 @@ h6 span {
     box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2)
 }
 
-.logo {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    display: block;
-    z-index: 100;
-    transition: all 250ms linear
-}
-
-.logo img {
-    height: 26px;
-    width: auto;
-    display: block
-}
+.
 
 
 </style>
 
-
+<br>
 <h2>Edit {{name}}</h2>
-
+<p>
+<br>
 <form action="/stages/edit/{{_id}}" method="post">
 <div class="form-div">
   <label for="name">name:</label>
@@ -311,11 +299,11 @@ h6 span {
   <input type="text" name="location" id="location" value="{{location}}">
 </div>
 
-<div class="form-div">
-  <label for="comments" style="position: relative; left: -50px; top: -40px;">Comments:</label>
-   <textarea id="w3review" name="w3review" rows="3" cols="50" style="margin-left: -50px" value="{{comments}}"></textarea>
-  <br> 
-</div>
+<div>
+    <label for="comments" style="position: relative; left: -20px; top: -40px;">Comments:</label>
+    <textarea id="w3review" name="w3review" rows="3" cols="50" style="margin-left: -20px"></textarea>
+  <br>
+  </div>
 
 <div class="form-div">
   <label for="uploadPhoto">Upload Photo:</label>

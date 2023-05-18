@@ -1,11 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  background-color: yellow;
+  
+  background-image:url("/images/backgroud-image.jpg");
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e4ea2cec;
+  background-color: #1e3b8ae5;
+  overflow-x: hidden
+
+  
 }
+
+.logo{
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  right: 20px;
+}
+
+h1{
+  text-align: center;
+  color: #1E3A8A;
+  font-family:system-ui;
+  margin: revert;
+}
+
+.quotes{
+  color:#1E3A8A;
+  font-family: system-ui
+}
+.quotes-p{
+  color: white;
+  }
+
+  .aboutUs{
+    text-align:right;
+    margin-top: -235px;
+    color: #1E3A8A;
+}
+
+
+
 
 /*------------------------------------------------------------------------------------------*/
 
+/* Carrossel */
+.b-0 {
+  bottom: 0;
+}
+.bg-shadow {
+  background: rgba(76, 76, 76, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+  background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+.top-indicator {
+  right: 0;
+  top: 1rem;
+  bottom: inherit;
+  left: inherit;
+  margin-right: 1rem;
+}
+.overflow {
+  position: relative;
+  overflow: hidden;
+}
+.zoom img {
+  transition: all 0.2s linear;
+}
+.zoom:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.h5 text-white my-1{
+color: black;
+}
+
+
+/*-----------------Footer-----------------------*/
