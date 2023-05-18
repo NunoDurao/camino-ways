@@ -26,9 +26,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 // Connects the mongo uri to maintain the same naming structure
-const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/camino-ways";
-
+const MONGO_URI = `mongodb+srv://nunofdurao:${process.env.MONGODB_PASSWORD}@cluster0.h6ehxwx.mongodb.net/?retryWrites=true&w=majority`;
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
