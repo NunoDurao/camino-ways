@@ -287,37 +287,43 @@ h6 span {
 <h2>Add a Photo</h2>
 
 <form action="/stages/create" method="post" enctype="multipart/form-data">
-<p>
-<br>
+  <p>
+    <br>
 
-  <div>
-    <label for="location">Location:</label>
-    <select name="location" id="location">
-      <option value="Porto-Vairao">Porto - Vairao</option>
-      <option value="Vairao-Barcelos">Vairao-Barcelos</option>
-      <option value="Barcelos-Ponte de Lima">Barcelos-Ponte de Lima</option>
-      <option value="Ponte de Lima-Rubiaes">Ponte de Lima-Rubiaes</option>
-      <option value="Rubiaes-Tui">Rubiaes-Tui</option>
-      <option value="Tui-Mos">Tui-Mos</option>
-      <option value="Mos-Pontevedra">Mos-Pontevedra</option>
-      <option value="Pontevedra-Caldas de Reis">Pontevedra-Caldas de Reis</option>
-      <option value="Caldas de Reis-Padron">Caldas de Reis-Padron</option>
-      <option value="Padron-Santiago de Compostela">Padron-Santiago de
-        Compostela</option>
-    </select>
-  </div>
+    <div>
+      <label for="location">Location:</label>
+      <select name="location" id="location">
+        <option value="Porto-Vairao">Porto - Vairao</option>
+        <option value="Vairao-Barcelos">Vairao-Barcelos</option>
+        <option value="Barcelos-Ponte de Lima">Barcelos-Ponte de Lima</option>
+        <option value="Ponte de Lima-Rubiaes">Ponte de Lima-Rubiaes</option>
+        <option value="Rubiaes-Tui">Rubiaes-Tui</option>
+        <option value="Tui-Mos">Tui-Mos</option>
+        <option value="Mos-Pontevedra">Mos-Pontevedra</option>
+        <option value="Pontevedra-Caldas de Reis">Pontevedra-Caldas de Reis</option>
+        <option value="Caldas de Reis-Padron">Caldas de Reis-Padron</option>
+        <option value="Padron-Santiago de Compostela">Padron-Santiago de Compostela</option>
+      </select>
+    </div>
 
-  <div>
-    <label for="comments" style="position: relative; left: -20px; top: -40px;">Comments:</label>
-    <textarea id="w3review" name="w3review" rows="3" cols="50" style="margin-left: -20px"></textarea>
-  <br>
-  
-  </div>
+    <div>
+      <label for="comments" style="position: relative; left: -20px; top: -40px;">Comments:</label>
+      <textarea id="comments" name="comments" rows="3" cols="50" style="margin-left: -20px"></textarea>
+      <br>
+    </div>
 
-  <div>
-    <label for="uploadPhoto">Upload Photo:</label>
-    <input type="file" name="imageUrl" id="uploadPhoto" />
-  </div>
+    <div>
+      <label for="uploadPhoto">Upload Photo:</label>
+      <input type="file" name="imageUrl" id="uploadPhoto" />
+    </div>
 
-  <button type="submit" class="btn">Submit</button>
+    <input type="hidden" name="userId" value="<%= currentUser %>" />
+
+    <button type="submit" class="btn">Submit</button>
 </form>
+<script>
+  //  using Express.js
+  const currentUser = req.session.currentUser._id;
+  const user = await User.findById(currentUser);
+  //  validations on the server-side
+</script>

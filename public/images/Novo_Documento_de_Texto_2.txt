@@ -1,9 +1,0 @@
-<div class="aboutUs">
-  <h3>About Us</h3>
-  <br>
-  <p>Nuno Durão: <a href="https://www.linkedin.com/in/nuno-dur%C3%A3o-75259bb3/">Linkedin</a>
-  <p><a href="https://github.com/NunoDurao">Git Hub</a>
-  <p>Renato Pais: <a href="https://www.linkedin.com/in/renato-pais-656b1340/">Linkedin</a></p>
-  <p><a href="https://github.com/Renatopais">Git Hub</a></p>
-  </div>
-  <script src='/js/script.js'></script>

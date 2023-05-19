@@ -1,3 +1,35 @@
+
+<br>
+<div id="login-form">
+  <h2>Log In</h2>
+  <form action="/auth/login" method="POST">
+<p>
+<br>
+    <label>
+      Username
+      <input type="text" name="username" placeholder="Your username" />
+    </label>
+</p>
+<p>
+    <label>
+      Email
+      <input type="email" name="email" placeholder="Your email"style="margin-left: 35px;" />
+    </label>
+</p>
+<p>
+    <label>
+      Password
+      <input type="password" name="password" placeholder="Your password" style="margin-left: 5px;" />
+    </label>
+</p>
+    <button type="submit" class="btn">Log In</button>
+    
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
@@ -60,43 +92,6 @@ h6 span {
     left: -9999px
 }
 
-.checkbox:checked+label,
-.checkbox:not(:checked)+label {
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 60px;
-    height: 16px;
-    border-radius: 2px;
-    padding: 0;
-    margin: 10px auto;
-    cursor: pointer;
-    background-color: #e4ea2cec
-}
-
-.checkbox:checked+label:before,
-.checkbox:not(:checked)+label:before {
-    position: absolute;
-    display: block;
-    width: 36px;
-    height: 36px;
-    border-radius: 10%;
-    color: #1e3b8ae5;
-    background-color: #2a2b38;
-    content:'';
-    z-index: 20;
-    font-size: 12px;
-    top: -10px;
-    left: -10px;
-    line-height: 36px;
-    text-align: center;
-    font-size: 24px;
-    transition: all 0.5s ease
-}
-
-.checkbox:checked+label:before {
-    transform: translateX(44px) rotate(-270deg)
-}
 
 .card-3d-wrap {
     position: relative;
@@ -281,35 +276,3 @@ h6 span {
 
 
 </style>
-<br>
-<div id="login-form">
-  <h2>Log In</h2>
-  <form action="/auth/login" method="POST">
-<p>
-<br>
-<br>
-    <label>
-      Username
-      <input type="text" name="username" placeholder="Your username" />
-    </label>
-</p>
-<p>
-    <label>
-      Email
-      <input type="email" name="email" placeholder="Your email"style="margin-left: 35px;" />
-    </label>
-</p>
-<p>
-    <label>
-      Password
-      <input type="password" name="password" placeholder="Your password" style="margin-left: 5px;" />
-    </label>
-</p>
-    <button type="submit" class="btn">Log In</button>
-    
-
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
-</div>

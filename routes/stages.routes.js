@@ -77,13 +77,12 @@ router.get("/stages/edit/:id", async (req, res, next) => {
 
 router.post("/stages/edit/:id", async (req, res, next) => {
   const stagesId = req.params.id;
-  const { name, location, comments, uploadPhoto } = req.body;
+  const {  location, comments, } = req.body;
   try {
     const pickedStages = await Stages.findByIdAndUpdate(stagesId, {
-      name,
       location,
       comments,
-      uploadPhoto,
+      
     });
     res.redirect(`/stages/${stagesId}`);
   } catch (error) {

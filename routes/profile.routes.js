@@ -24,6 +24,8 @@ router.get("/profile", async (req, res) => {
     let caldasDeReiPadron = [];
     let padronSantiagoDeCompostela = [];
 
+// <-- set places to array
+
     for (let i = 0; i < userStages.length; i++) {
       if (userStages[i].location === "Porto-Vairao") {
         portoVairao.push(userStages[i]);
